@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_border"
+    android:padding="13dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardImgProduct"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgProduct"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/product_image"
+            android:src="@mipmap/ic_launcher" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins_bold"
+        android:minLines="2"
+        android:text="@string/product_title"
+        android:textColor="@color/neutralDark"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/cardImgProduct"
+        app:layout_constraintStart_toStartOf="@+id/cardImgProduct"
+        app:layout_constraintTop_toBottomOf="@+id/cardImgProduct" />
+
+    <com.willy.ratingbar.BaseRatingBar
+        android:id="@+id/ratingProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+        app:srb_clearRatingEnabled="false"
+        app:srb_clickable="false"
+        app:srb_drawableEmpty="@drawable/ic_empty_star"
+        app:srb_drawableFilled="@drawable/ic_filled_star"
+        app:srb_numStars="5"
+        app:srb_rating="3"
+        app:srb_scrollable="false"
+        app:srb_starHeight="12dp"
+        app:srb_starPadding="2dp"
+        app:srb_starWidth="12dp"
+        app:srb_stepSize="1" />
+
+    <TextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/price"
+        android:textColor="@color/primaryBlue"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/ratingProduct" />
+
+    <TextView
+        android:id="@+id/txtStrikePrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/strike_price"
+        android:textColor="@color/neutralGrey"
+        android:textSize="11sp"
+        app:layout_constraintStart_toStartOf="@+id/txtPrice"
+        app:layout_constraintTop_toBottomOf="@+id/txtPrice" />
+
+    <TextView
+        android:id="@+id/txtDiscount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/discount"
+        android:textColor="@color/primaryRed"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtStrikePrice"
+        app:layout_constraintStart_toEndOf="@+id/txtStrikePrice"
+        app:layout_constraintTop_toTopOf="@+id/txtStrikePrice" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/discount_off"
+        android:textColor="@color/primaryRed"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtDiscount"
+        app:layout_constraintStart_toEndOf="@+id/txtDiscount"
+        app:layout_constraintTop_toTopOf="@+id/txtDiscount" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/bg_border"
+            android:drawableStart="@drawable/ic_search"
+            android:drawablePadding="9dp"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="@string/search_product"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:textColor="@color/neutralGrey"
+            android:textColorHint="@color/neutralGrey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnFavorite"
+            app:layout_constraintEnd_toStartOf="@+id/btnFavorite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btnFavorite" />
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="18dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/favorite"
+            android:src="@drawable/ic_love"
+            app:layout_constraintBottom_toBottomOf="@+id/btnNotification"
+            app:layout_constraintEnd_toStartOf="@+id/btnNotification"
+            app:layout_constraintTop_toTopOf="@+id/btnNotification" />
+
+        <ImageButton
+            android:id="@+id/btnNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/notification"
+            android:src="@drawable/ic_notification"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/neutralLight"
+            app:layout_constraintTop_toBottomOf="@id/edtSearch" />
+
+        <TextView
+            android:id="@+id/txtCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/category"
+            android:textColor="@color/neutralDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/edtSearch"
+            app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnShirt"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/ic_shirt"
+            app:layout_constraintStart_toStartOf="@+id/txtCategory"
+            app:layout_constraintTop_toBottomOf="@+id/txtCategory" />
+
+        <TextView
+            android:id="@+id/txtShirt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:minLines="2"
+            android:text="@string/man_shirt"
+            android:textAlignment="center"
+            android:textColor="@color/neutralGrey"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnShirt"
+            app:layout_constraintStart_toStartOf="@+id/btnShirt"
+            app:layout_constraintTop_toBottomOf="@+id/btnShirt" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDress"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/ic_dress"
+            app:layout_constraintBottom_toBottomOf="@+id/btnShirt"
+            app:layout_constraintStart_toEndOf="@+id/btnShirt"
+            app:layout_constraintTop_toTopOf="@+id/btnShirt" />
+
+        <TextView
+            android:id="@+id/txtDress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:minLines="2"
+            android:text="@string/dress"
+            android:textAlignment="center"
+            android:textColor="@color/neutralGrey"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnDress"
+            app:layout_constraintStart_toStartOf="@+id/btnDress"
+            app:layout_constraintTop_toBottomOf="@+id/btnDress" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSuitcase"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/ic_suitcase"
+            app:layout_constraintStart_toEndOf="@+id/btnDress"
+            app:layout_constraintTop_toTopOf="@+id/btnDress" />
+
+        <TextView
+            android:id="@+id/txtSuitcase"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:minLines="2"
+            android:text="@string/man_work_equipment"
+            android:textAlignment="center"
+            android:textColor="@color/neutralGrey"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSuitcase"
+            app:layout_constraintStart_toStartOf="@+id/btnSuitcase"
+            app:layout_constraintTop_toBottomOf="@+id/btnSuitcase" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBag"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/ic_bag"
+            app:layout_constraintStart_toEndOf="@+id/btnSuitcase"
+            app:layout_constraintTop_toTopOf="@+id/btnSuitcase" />
+
+        <TextView
+            android:id="@+id/txtBag"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:minLines="2"
+            android:text="@string/woman_bag"
+            android:textAlignment="center"
+            android:textColor="@color/neutralGrey"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnBag"
+            app:layout_constraintStart_toStartOf="@+id/btnBag"
+            app:layout_constraintTop_toBottomOf="@+id/btnBag" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerProduct"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintStart_toStartOf="@id/edtSearch"
+            app:layout_constraintEnd_toEndOf="@id/btnNotification"
+            app:layout_constraintTop_toBottomOf="@+id/txtShirt"
+            app:spanCount="2"
+            tools:listitem="@layout/item_product" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

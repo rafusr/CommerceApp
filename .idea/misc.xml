@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/bg_border.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/custom_rating.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/ic_cart.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/ic_empty_star.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/ic_filled_star.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/ic_home.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/ic_shirt.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/drawable/search_bg.xml" value="0.154" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/activity_detail.xml" value="0.4355362946912243" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/fragment_account.xml" value="0.33" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/fragment_cart.xml" value="0.209375" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/fragment_explore.xml" value="0.209375" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/fragment_home.xml" value="0.12017937219730941" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/fragment_offer.xml" value="0.1953125" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/layout/item_product.xml" value="0.5" />
+        <entry key="..\:/Users/andpu/Documents/Playground/AndroidStudioProject/CommerceApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.209375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

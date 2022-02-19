@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.AccountFragment">
+
+    <TextView
+        android:id="@+id/txtProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="27dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/profile"
+        android:textColor="@color/neutralDark"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/viewDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="28dp"
+        android:background="@color/neutralLight"
+        app:layout_constraintTop_toBottomOf="@id/txtProfile" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civProfile"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/andikas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/name"
+        android:textColor="@color/neutralDark"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/txtUsername"
+        app:layout_constraintStart_toEndOf="@+id/civProfile"
+        app:layout_constraintTop_toTopOf="@+id/civProfile"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/txtUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/username"
+        android:textColor="@color/neutralGrey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/civProfile"
+        app:layout_constraintStart_toStartOf="@+id/txtName"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <ImageView
+        android:id="@+id/imgGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/gender_icon"
+        android:src="@drawable/ic_gender"
+        app:layout_constraintStart_toStartOf="@+id/civProfile"
+        app:layout_constraintTop_toBottomOf="@+id/civProfile" />
+
+    <TextView
+        android:id="@+id/txtGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/gender"
+        android:textColor="@color/neutralDark"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgGender"
+        app:layout_constraintStart_toEndOf="@+id/imgGender"
+        app:layout_constraintTop_toTopOf="@+id/imgGender" />
+
+    <TextView
+        android:id="@+id/txtGenderDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/gender_value"
+        android:textColor="@color/neutralGrey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGender"
+        app:layout_constraintEnd_toStartOf="@+id/btnArrowGender"
+        app:layout_constraintTop_toTopOf="@+id/txtGender" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnArrowGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@+id/txtGender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtGender" />
+
+    <ImageView
+        android:id="@+id/imgBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/birthday_icon"
+        android:src="@drawable/ic_date"
+        app:layout_constraintStart_toStartOf="@+id/imgGender"
+        app:layout_constraintTop_toBottomOf="@+id/imgGender" />
+
+    <TextView
+        android:id="@+id/txtBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/birthday"
+        android:textColor="@color/neutralDark"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgBirthday"
+        app:layout_constraintStart_toEndOf="@+id/imgBirthday"
+        app:layout_constraintTop_toTopOf="@+id/imgBirthday" />
+
+    <TextView
+        android:id="@+id/txtBirthdayDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/birthday_value"
+        android:textColor="@color/neutralGrey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBirthday"
+        app:layout_constraintEnd_toStartOf="@+id/btnArrowBirthday"
+        app:layout_constraintTop_toTopOf="@+id/txtBirthday" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnArrowBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@+id/txtBirthday"
+        app:layout_constraintEnd_toEndOf="@id/btnArrowGender"
+        app:layout_constraintTop_toTopOf="@+id/txtBirthday" />
+
+    <ImageView
+        android:id="@+id/imgEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/email_icon"
+        android:src="@drawable/ic_message"
+        app:layout_constraintStart_toStartOf="@+id/imgBirthday"
+        app:layout_constraintTop_toBottomOf="@+id/imgBirthday" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/email"
+        android:textColor="@color/neutralDark"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgEmail"
+        app:layout_constraintStart_toEndOf="@+id/imgEmail"
+        app:layout_constraintTop_toTopOf="@+id/imgEmail" />
+
+    <TextView
+        android:id="@+id/txtEmailDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/email_value"
+        android:textColor="@color/neutralGrey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+        app:layout_constraintEnd_toStartOf="@+id/btnArrowEmail"
+        app:layout_constraintTop_toTopOf="@+id/txtEmail" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnArrowEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEmail"
+        app:layout_constraintEnd_toEndOf="@id/btnArrowBirthday"
+        app:layout_constraintTop_toTopOf="@+id/txtEmail" />
+
+    <ImageView
+        android:id="@+id/imgPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/phone_icon"
+        android:src="@drawable/ic_phone"
+        app:layout_constraintStart_toStartOf="@+id/imgEmail"
+        app:layout_constraintTop_toBottomOf="@+id/imgEmail" />
+
+    <TextView
+        android:id="@+id/txtPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/phone"
+        android:textColor="@color/neutralDark"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgPhone"
+        app:layout_constraintStart_toEndOf="@+id/imgPhone"
+        app:layout_constraintTop_toTopOf="@+id/imgPhone" />
+
+    <TextView
+        android:id="@+id/txtPhoneDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/phone_value"
+        android:textColor="@color/neutralGrey"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPhone"
+        app:layout_constraintEnd_toStartOf="@+id/btnArrowPhone"
+        app:layout_constraintTop_toTopOf="@+id/txtPhone" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnArrowPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="@+id/txtPhone"
+        app:layout_constraintEnd_toEndOf="@id/btnArrowBirthday"
+        app:layout_constraintTop_toTopOf="@+id/txtPhone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

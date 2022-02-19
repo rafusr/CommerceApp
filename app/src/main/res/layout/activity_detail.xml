@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="92dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnDetailBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="27dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_left"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTopDetailTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:maxLength="21"
+            android:text="@string/product_title"
+            android:textColor="@color/neutralDark"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnDetailBack"
+            app:layout_constraintStart_toEndOf="@+id/btnDetailBack"
+            app:layout_constraintTop_toTopOf="@+id/btnDetailBack" />
+
+        <View
+            android:id="@+id/viewDivider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="28dp"
+            android:background="@color/neutralLight"
+            app:layout_constraintTop_toBottomOf="@+id/btnDetailBack" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgDetailProduct"
+            android:layout_width="match_parent"
+            android:layout_height="238dp"
+            android:background="@android:color/darker_gray"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@+id/viewDivider" />
+
+        <TextView
+            android:id="@+id/txtDetailTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="44dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/product_title"
+            android:textColor="@color/neutralDark"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnDetailFavorite"
+            app:layout_constraintStart_toStartOf="@+id/btnDetailBack"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetailProduct" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnDetailFavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_love"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgDetailProduct" />
+
+        <com.willy.ratingbar.BaseRatingBar
+            android:id="@+id/ratingDetailProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailTitle"
+            app:srb_clearRatingEnabled="false"
+            app:srb_clickable="false"
+            app:srb_drawableEmpty="@drawable/ic_empty_star"
+            app:srb_drawableFilled="@drawable/ic_filled_star"
+            app:srb_numStars="5"
+            app:srb_rating="4"
+            app:srb_scrollable="false"
+            app:srb_starHeight="16dp"
+            app:srb_starPadding="3dp"
+            app:srb_starWidth="16dp"
+            app:srb_stepSize="1" />
+
+        <TextView
+            android:id="@+id/txtDetailPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/price"
+            android:textColor="@color/primaryBlue"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailTitle"
+            app:layout_constraintTop_toBottomOf="@+id/ratingDetailProduct" />
+
+        <TextView
+            android:id="@+id/txtSpecification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="34dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/specification"
+            android:textColor="@color/neutralDark"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/txtDetailPrice"
+            app:layout_constraintTop_toBottomOf="@+id/txtDetailPrice" />
+
+        <TextView
+            android:id="@+id/txtShown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/shown"
+            android:textColor="@color/neutralDark"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txtSpecification"
+            app:layout_constraintTop_toBottomOf="@+id/txtSpecification" />
+
+        <TextView
+            android:id="@+id/txtDetailShown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/shown_value"
+            android:textColor="@color/neutralGrey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtShown"
+            app:layout_constraintEnd_toEndOf="@+id/btnDetailFavorite"
+            app:layout_constraintTop_toTopOf="@+id/txtShown" />
+
+        <TextView
+            android:id="@+id/txtStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/style"
+            android:textColor="@color/neutralDark"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/txtShown"
+            app:layout_constraintTop_toBottomOf="@+id/txtShown" />
+
+        <TextView
+            android:id="@+id/txtDetailStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/style_value"
+            android:textColor="@color/neutralGrey"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtStyle"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailShown"
+            app:layout_constraintTop_toTopOf="@+id/txtStyle" />
+
+        <TextView
+            android:id="@+id/txtDetailDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/detail_desc"
+            android:textColor="@color/neutralGrey"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtDetailStyle"
+            app:layout_constraintStart_toStartOf="@+id/txtStyle"
+            app:layout_constraintTop_toBottomOf="@+id/txtStyle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
